@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #1F2937;
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: #1F2937;
+}
+
+/* ===== FLEXBOX: Header Navigation =====
+   We want the logo on the LEFT and links on the RIGHT.
+   
+   display: flex        → Turns this into a flex container, children become flex items
+   justify-content: space-between → Pushes items to opposite ends (logo left, links right)
+   align-items: center  → Vertically centers items so they line up in the middle
+*/
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  color: #F9FAF8;
+  font-weight: 900;
+}
+
+/* ===== FLEXBOX: Header Links =====
+   We want the 3 links side by side in a row with spacing.
+   
+   display: flex → Arranges links horizontally (default flex-direction is row)
+   gap: 20px    → Adds 20px of space BETWEEN each link (not on the outside edges)
+*/
+.header-links {
+  display: flex;
+  gap: 20px;
+}
+
+.header-links a {
+  color: #E5E7EB;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.hero {
+  padding: 80px 0 100px;
+}
+
+/* ===== FLEXBOX: Hero Content =====
+   We want text on the LEFT and the image placeholder on the RIGHT.
+   
+   display: flex       → Arranges children (hero-text and hero-image) in a row
+   align-items: center → Vertically centers both so they're aligned in the middle
+   gap: 40px           → Adds space between the text and image sections
+*/
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ===== FLEXBOX: Hero Text & Hero Image =====
+   flex: 1 → Both take up equal space (50% each).
+   Think of it as: "I'll grow to fill available space, and I'm equally important as my sibling."
+   Without this, they would shrink to fit only their content.
+*/
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #F9FAF8;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #E5E7EB;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #3882F6;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+/* ===== FLEXBOX: Placeholder Box =====
+   We want to center the text both horizontally and vertically inside the gray box.
+   
+   display: flex          → Turns the box into a flex container
+   justify-content: center → Centers content horizontally (along the main axis)
+   align-items: center     → Centers content vertically (along the cross axis)
+   
+   This is the classic "center something perfectly" flexbox trick.
+*/
+.placeholder-box {
+  background-color: #6B7280;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E5E7EB;
+  font-size: 18px;
+}
+
+.info-section {
+  background-color: #FFFFFF;
+  padding: 50px 0;
+}
+
+.info-heading {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1F2937;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===== FLEXBOX: Info Cards Container =====
+   We want all 4 cards in a horizontal row, centered on the page.
+   
+   display: flex          → Arranges the 4 cards in a row
+   justify-content: center → Centers the entire group of cards horizontally
+   gap: 40px              → Adds equal spacing between each card
+*/
+.info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  width: 150px;
+  text-align: center;
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #3882F6;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #1F2937;
+  font-size: 16px;
+}
+
+.quote-section {
+  background-color: #E5E7EB;
+  padding: 100px 0;
+}
+
+.quote {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-text {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1F2937;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.quote-author {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1F2937;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.cta-section {
+  background-color: #FFFFFF;
+  padding: 80px 0;
+}
+
+/* ===== FLEXBOX: CTA Box =====
+   We want text on the LEFT and the button on the RIGHT.
+   
+   display: flex             → Arranges text and button in a row
+   justify-content: space-between → Pushes text to left edge, button to right edge
+   align-items: center       → Vertically centers both so button lines up with text
+*/
+.cta-box {
+  background-color: #3882F6;
+  border-radius: 10px;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-text {
+  flex: 1;
+}
+
+.cta-heading {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.cta-subtext {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  padding: 10px 35px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #1F2937;
+  padding: 30px 0;
+}
+
+.footer-text {
+  color: #E5E7EB;
+  text-align: center;
+  font-size: 16px;
+}
